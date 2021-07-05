@@ -1,0 +1,23 @@
+section {
+  width: 50%;
+  margin: 0 auto;
+  height: 50vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 0;
+}
+
+.img_preview {
+  width: 250px;
+  height: 250px;
+  border: 1px solid black;
+}
+img {
+  width: 100%;
+  height: auto;
+}

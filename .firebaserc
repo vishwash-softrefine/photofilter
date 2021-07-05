@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "onlineportal-e3380": {
+      "hosting": {
+        "ngRX": [
+          "onlineportal-e3380"
+        ]
+      }
+    }
+  }
+}

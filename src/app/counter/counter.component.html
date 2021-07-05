@@ -1,0 +1,43 @@
+<section>
+    <div class="flex">
+        <button (click)='increment()'>Increment</button>
+        <button (click)='decrement()'>Decrement</button>
+        <button (click)='reset()'>Reset</button>
+    </div>
+</section>
+<div>
+    <p>Counter :</p>
+    <div>
+        <form #form="ngForm">
+            Name : <input type="text" name="name" ngModel> <br>
+            Details : <input type="text" name="details" ngModel><br>
+            Age : <input type="text" name="age" ngModel><br>
+            <button (click)="saveEmpData(form.value)">GetData</button>
+        </form>
+    </div>
+    <button (click)="getEmpList()">FetchData</button>
+    <div *ngFor="let x of formadata">
+        <p>{{x}}</p>
+    </div>
+    <button (click)="deleteData()">Delete All Data</button>
+    <br><br>
+    <!-- <div class="img_preview" [ngStyle]="{ 'background':'url('+imgUrl+')', 'background-blend-mode':'overlay' }"> -->
+    <section>
+
+        <div class="image_section">
+            <div class="img_preview" *ngIf="imgUrl"
+                [ngStyle]="{ 'background':'linear-gradient('+ deg +'deg,' + clr1 +','+ clr2 + ') ,url('+imgUrl+')', 'background-blend-mode':varient,'background-size':'cover'}"
+                download>
+            </div>
+            <input type="file" class="file-upload" (change)="getDataimg($event)">
+            <input type="color" [(ngModel)]='clr1' #color1 (change)="getcolorval(color1.value)">
+            <input type="color" [(ngModel)]='clr2' #color2 (change)="getcolorval(color2.value)">
+            <input type="text" [(ngModel)]='deg' #degVal (change)="getdegVal(degVal.value)">
+            <select [(ngModel)]='varient' #colorvarient (change)="getcolorsel(colorvarient.value)">
+                <option *ngFor="let x of varientObj" value="{{x}}">{{x}}</option>
+            </select>
+        </div>
+
+    </section>
+    <!-- console.log(event.target.files) -->
+</div>
